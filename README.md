@@ -4,8 +4,9 @@ PW-Gen-Excel-VBA
 If you need to relative securely lock and share Excel sheets. Can be used for rudimentary signing procedures.
 These scripts can lock an excel worksheet with a random password, alter the password, to dilute it and generate a different string for reverse this dilution and the password itself.
 Additionally the password can be splitted for different parties to obtain a part of the key, so no unconsesual changes can be made.
-===============
+
 basic recommended workflow:
+===============
   1. create a random password with Hash.GetString({#}, {#}), for a pw # characters long
   2. lock your Excel Worksheet with this random pw
   3. add some salt and pepper to your pw with Hash.SaltAndPepper({YourPW}) IMPORTANT: in the process a decode string is generated and can be saved anywhere. At the moment it is stored inside the workbook, please modify your code at the marked position!
@@ -16,8 +17,9 @@ To regain the pw you strap the SaPStr of any unused characters by using Hash.Str
 This workflow does not provide any security measures in traditional sense. It is critical to implement it into your sharing workflow.
 
 Fields of application could be storing the keys in two different locations or sharing a worksheet, which's password cannot be guessed.
-================
+
 extended workflow for locking a worksheet, splitting the key and waiting for a signature:
+================
   1. Lock a Worksheet with Tool.Locker (please modify any paths and number of recipients)
   2. The chosen worksheet will be locked and the key will be splitted into one part for every recipient
   3. A MS Outlook instance will open with the prepared e-mails for every recipient and two links to sign the document or deny the request. The locked document should be attached, enter e-mail addresses and such and send the e-mails.
