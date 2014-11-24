@@ -6,7 +6,7 @@ If you need to relative securely lock and share Excel sheets. Can be used for ru
 Create and hash passwords in module "Hash"
 
 basic recommended workflow:
-  1. create a random password with Hash.GetString({#>}, {#}), for a pw # characters long
+  1. create a random password with Hash.GetString({#}, {#}), for a pw # characters long
   2. lock your Excel Worksheet with this random pw
   3. add some salt and pepper to your pw with Hash.SaltAndPepper({YourPW})
       a) in the process a decode string is generated and can be saved anywhere. At the moment it is stored inside the
