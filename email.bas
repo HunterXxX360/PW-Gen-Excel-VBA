@@ -10,10 +10,10 @@ With objOMail
     .Subject = "For Review"
     ' please add your e-mail for test@test.com
     .htmlBody = "<p>" & _
-        "<a href=""mailto:test@test.com?body=" & pw & hash & "&amp;subject=Signature"">Sign</a>" & _
+        "<a href=""mailto:test@test.com?body=0D%0A%23%23Mark%23%23%0D%0A" & pw & hash & "%0D%0A%23%23Mark%20End%23%23&amp;subject=Signature"">Sign</a>" & _
         "</p>" & _
         "<p>" & _
-        "<a href=""mailto:test@test.com?body=delete%20key" & hash & "&amp;subject=Rejection"">Reject</a>" & _
+        "<a href=""mailto:test@test.com?body=0D%0A%23%23Mark%23%23%0D%0Adelete%20key" & hash & "%0D%0A%23%23Mark%20End%23%23&amp;subject=Rejection"">Reject</a>" & _
         "</p>"
     If IsMissing(AttPath) = False Then
         .Attachments.Add AttPath
