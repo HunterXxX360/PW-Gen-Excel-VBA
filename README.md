@@ -5,6 +5,7 @@ If you need to relative securely lock and share Excel sheets. Can be used for ru
 
 Create and hash passwords in module "Hash"
 
+===============
 basic recommended workflow:
   1. create a random password with Hash.GetString({#}, {#}), for a pw # characters long
   2. lock your Excel Worksheet with this random pw
@@ -17,6 +18,7 @@ This workflow does not provide any security measures in traditional sense. It is
 
 Fields of application could be storing the keys in two different locations or sharing a worksheet, which's password cannot be guessed.
 
+================
 extended workflow for locking a worksheet, splitting the key and waiting for a signature:
   1. Lock a Worksheet with Tool.Locker (please modify any paths and number of recipients)
   2. The chosen worksheet will be locked and the key will be splitted into one part for every recipient
