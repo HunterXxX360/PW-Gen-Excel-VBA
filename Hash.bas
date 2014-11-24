@@ -1,3 +1,5 @@
+Option Explicit
+
 Function GetString(Obergrenze As Integer, Untergrenze As Integer) As String
 Dim Rand As String
 Dim Nx As String
