@@ -17,4 +17,13 @@ This workflow does not provide any security measures in traditional sense. It is
 
 Fields of application could be storing the keys in two different locations or sharing a worksheet, which's password cannot be guessed.
 
-The extended workflow will be uploaded soon...
+extended workflow for locking a worksheet, splitting the key and waiting for a signature:
+  1. Lock a Worksheet with Tool.Locker (please modify any paths and number of recipients)
+  2. The chosen worksheet will be locked and the key will be splitted into one part for every recipient
+  3. A MS Outlook instance will open with the prepared e-mails for every recipient and two links to sign the document or deny the request. The locked document should be attached, enter e-mail addresses and such and send the e-mails.
+  4. As a recipient you can click on one of the links, which opens a new e-mail with your part of the SaP-pw included, send it
+  5. All signatures are collected by the issuer
+  6. If all keys came back get them into the right order (maybe you mark the e-mails from the start) and reconsolidate the key. Keys can be read directly from an e-mail with Tool.ReadKey({e-mail's path})
+  7. Unlock the Worksheet with Tool.Unlocker({reconsolidated key}, {hash})
+
+This workflow provides some security measures, because the password itself is not directly stored on the issuers pc, but can hardly be altered for other purposes than gaining approval of a few recipients. Not the issuer and no recipient alone can unlock and alter the worksheet.
