@@ -49,7 +49,7 @@ End Sub
 
 
 
-Function ReadKey(Path, Optional PartKeys As Boolean = False) As String
+Function ReadKey(Path) As String
 Dim OutApp As Object
 Dim objOMail As Object
 Dim hBody As String
