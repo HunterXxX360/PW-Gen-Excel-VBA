@@ -8,7 +8,7 @@ Create and hash passwords in module "Hash"
 basic recommended workflow:
   1. create a random password with Hash.GetString({#}, {#}), for a pw # characters long
   2. lock your Excel Worksheet with this random pw
-  3. add some salt and pepper to your pw with Hash.SaltAndPepper({YourPW}) IMPORTANT: in the process a decode string is generated and can be saved anywhere. At the moment it is stored inside the workbook, please modify your code here
+  3. add some salt and pepper to your pw with Hash.SaltAndPepper({YourPW}) IMPORTANT: in the process a decode string is generated and can be saved anywhere. At the moment it is stored inside the workbook, please modify your code at the marked position!
   4. hash the salted and peppered string with a hash x characters long Hash.Hash{X}({SaPStr}) and save the hash for identification procedures
 
 To regain the pw you strap the SaPStr of any unused characters by using Hash.StrapString({SaPStr}, {decodeStr}), the decode String is generated under 3.
