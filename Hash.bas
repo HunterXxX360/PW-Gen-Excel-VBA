@@ -54,7 +54,9 @@ Next i
 
 SaltAndPepper = SaPStr
 
-'insecure save place inside Workbook
+'##################################################################################
+'###                security warning -> saved inside workbook                   ###
+'##################################################################################
 With ThisWorkbook.Sheets(1)
     d = Dwn(ThisWorkbook.Worksheets(1).Range("A1")) + 1
     .Cells(d, 2).Value = "'" & InfStr
