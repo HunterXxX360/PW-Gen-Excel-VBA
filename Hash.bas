@@ -13,7 +13,7 @@ Do
     i = i + 1
     Randomize
     Nx = Chr(38)
-    'symbols following are forbidden, due to incompatibilities:
+    'following symbols are forbidden, due to incompatibilities with html-formatting:
     ' &
     ' '
     ' \
