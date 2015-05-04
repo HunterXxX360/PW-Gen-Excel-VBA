@@ -7,7 +7,7 @@ Dim pwS As String
 
 pw = Hash.GetString(128, 128)
 
-AP = ThisWorkbook.Path & "\" & Workbooks(1).Name 'attachement path
+AP = ThisWorkbook.Path & "\" & Workbooks(1).Name 'attachment path
 
 pwS = SaltAndPepper(pw)
 
